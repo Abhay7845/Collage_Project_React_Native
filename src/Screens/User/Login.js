@@ -23,6 +23,10 @@ const Login = ({ navigation }) => {
   const TogglePassword = () => {
     setPasswordShown(!passwordShown);
   };
+  const GetLogin = () => {
+    navigation.navigate("Product Details");
+  };
+
   return (
     <ScrollView>
       <View style={styles.imageView}>
@@ -62,9 +66,10 @@ const Login = ({ navigation }) => {
               backgroundColor:
                 phoneNumber.length >= 10 && password.length >= 4
                   ? "#1899e4"
-                  : "gray",
+                  : "#8080806f",
             },
           ]}
+          onPress={GetLogin}
         >
           <Text style={styles.btnText}>LOGIN</Text>
         </TouchableOpacity>

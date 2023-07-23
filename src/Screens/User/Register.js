@@ -227,7 +227,7 @@ const Register = ({ navigation }) => {
                   pin5 !== "" &&
                   pin6 !== ""
                     ? "#1899e4"
-                    : "gray",
+                    : "#8080806f",
               },
             ]}
             onPress={VerifyOTP}
@@ -249,7 +249,8 @@ const Register = ({ navigation }) => {
             style={[
               styles.CButton,
               {
-                backgroundColor: phoneNumber.length < 10 ? "gray" : "#1899e4",
+                backgroundColor:
+                  phoneNumber.length < 10 ? "#8080806f" : "#1899e4",
               },
             ]}
             onPress={GetOtp}
