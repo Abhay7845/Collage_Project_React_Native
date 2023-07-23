@@ -245,12 +245,12 @@ const Register = ({ navigation }) => {
             leftIcon={<Phone name="mobile-phone" size={40} color="gray" />}
           />
           <TouchableOpacity
-            disabled={
-              phoneNumber.length < 10 && phoneNumber === "" ? true : false
-            }
+            disabled={phoneNumber.length < 10 ? true : false}
             style={[
               styles.CButton,
-              { backgroundColor: phoneNumber.length < 10 ? "gray" : "#1899e4" },
+              {
+                backgroundColor: phoneNumber.length < 10 ? "gray" : "#1899e4",
+              },
             ]}
             onPress={GetOtp}
           >
