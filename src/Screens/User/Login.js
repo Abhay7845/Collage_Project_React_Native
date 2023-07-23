@@ -17,7 +17,7 @@ const Login = ({ navigation }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
 
-  console.log("phoneNumber=>", phoneNumber);
+  console.log("phoneNumber=>", typeof phoneNumber);
   console.log("password=>", password);
 
   const TogglePassword = () => {
@@ -33,11 +33,13 @@ const Login = ({ navigation }) => {
         <Input
           placeholder="Phone Number"
           keyboardType="numeric"
+          maxLength={10}
           leftIcon={<Phone name="mobile-phone" size={40} color="gray" />}
           onChangeText={(value) => setPhoneNumber(value)}
         />
         <Input
           placeholder="Password"
+          maxLength={8}
           secureTextEntry={passwordShown}
           leftIcon={<Icon name="lock" size={30} color="gray" />}
           rightIcon={

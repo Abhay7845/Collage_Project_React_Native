@@ -238,6 +238,7 @@ const Register = ({ navigation }) => {
           <Input
             placeholder="Phone Number"
             keyboardType="numeric"
+            maxLength={10}
             onChangeText={(value) => SetPhoneNumber(value)}
             leftIcon={<Phone name="mobile-phone" size={40} color="gray" />}
           />
