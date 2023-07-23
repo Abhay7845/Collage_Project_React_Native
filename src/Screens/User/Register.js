@@ -29,7 +29,9 @@ const Register = ({ navigation }) => {
   const [count, setCount] = useState(60);
 
   const GetOtp = () => {
-    const Otp = Math.floor(Math.random() * 1000000 + 1);
+    const min = 100000;
+    const max = 999999;
+    const Otp = Math.floor(Math.random() * (max - min + 1)) + min;
     setOtp(Otp);
     setCount(60);
   };
