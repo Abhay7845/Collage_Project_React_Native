@@ -14,6 +14,12 @@ import GIcon from "../../../assets/googleBtn.png";
 
 const Login = ({ navigation }) => {
   const [passwordShown, setPasswordShown] = useState(true);
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState("");
+
+  console.log("phoneNumber=>", phoneNumber);
+  console.log("password=>", password);
+
   const TogglePassword = () => {
     setPasswordShown(!passwordShown);
   };
@@ -28,6 +34,7 @@ const Login = ({ navigation }) => {
           placeholder="Phone Number"
           keyboardType="numeric"
           leftIcon={<Phone name="mobile-phone" size={40} color="gray" />}
+          onChangeText={(value) => setPhoneNumber(value)}
         />
         <Input
           placeholder="Password"
@@ -41,8 +48,22 @@ const Login = ({ navigation }) => {
               onPress={TogglePassword}
             />
           }
+          onChangeText={(value) => setPassword(value)}
         />
-        <TouchableOpacity style={styles.CButton}>
+        <TouchableOpacity
+          disabled={
+            phoneNumber.length >= 10 && password.length >= 4 ? false : true
+          }
+          style={[
+            styles.CButton,
+            {
+              backgroundColor:
+                phoneNumber.length >= 10 && password.length >= 4
+                  ? "#1899e4"
+                  : "gray",
+            },
+          ]}
+        >
           <Text style={styles.btnText}>LOGIN</Text>
         </TouchableOpacity>
       </View>
