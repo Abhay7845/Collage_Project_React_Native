@@ -37,7 +37,7 @@ const Register = ({ navigation }) => {
   const VerifyOTP = () => {
     const enteredOTP = `${pin1}${pin2}${pin3}${pin4}${pin5}${pin6}`;
     if (otp === parseInt(enteredOTP)) {
-      Alert.alert("Valid OTP");
+      navigation.navigate("Product Detals");
     } else {
       Alert.alert("Invalid OTP");
     }
@@ -263,6 +263,12 @@ const Register = ({ navigation }) => {
           If you have account Login
         </Text>
       </TouchableOpacity>
+      {otp && (
+        <View style={styles.sendedOTP}>
+          <Text style={styles.sededOtpTxt}>Your OTP - </Text>
+          <Text style={styles.sededOtpTxt}>{otp}</Text>
+        </View>
+      )}
     </ScrollView>
   );
 };
@@ -329,5 +335,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     color: "blue",
+  },
+  sendedOTP: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    margin: 10,
+    marginTop: 80,
+  },
+  sededOtpTxt: {
+    fontSize: 20,
   },
 });
