@@ -10,7 +10,7 @@ import {
 import { Input } from "@rneui/themed";
 import Icon from "react-native-vector-icons/Entypo";
 import Phone from "react-native-vector-icons/FontAwesome";
-import GIcon from "../../assets/googleBtn.png";
+import GIcon from "../../../assets/googleBtn.png";
 
 const Login = ({ navigation }) => {
   const [passwordShown, setPasswordShown] = useState(true);

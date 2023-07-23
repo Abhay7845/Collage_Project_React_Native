@@ -2,8 +2,8 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./src/Screens/Home";
-import Login from "./src/Screens/Login";
-import Register from "./src/Screens/Register";
+import Login from "./src/Screens/User/Login";
+import Register from "./src/Screens/User/Register";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -23,7 +23,7 @@ export default function App() {
         <Stack.Screen
           name="Register"
           component={Register}
-          // options={{ headerShown: false }}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
