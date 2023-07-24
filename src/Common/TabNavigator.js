@@ -30,7 +30,7 @@ const TabNavigator = () => {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.TabIcon}
-        onPress={() => navigation.navigate("Product Details")}
+        onPress={() => navigation.navigate("More")}
       >
         <Icon name="list-ul" size={28} color="#ddd9d9" />
         <Text style={styles.TabIcon}>More</Text>

@@ -13,7 +13,7 @@ import img1 from "../../assets/heading1.webp";
 import img2 from "../../assets/heading2.jpg";
 import img3 from "../../assets/heading3.jpg";
 import { Heading1, Heading2, Heading3, ImageList } from "../DataList";
-import TabNavigator from "../Common/TabNavigator";
+import TabNavigator from "./TabNavigator";
 
 const Home = ({ navigation }) => {
   const [showMore1, setShowMore1] = useState("");

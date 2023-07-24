@@ -1,11 +1,12 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Home from "./src/Screens/Home";
+import Home from "./src/Common/Home";
 import Login from "./src/Screens/User/Login";
 import Register from "./src/Screens/User/Register";
-import OurProducts from "./src/Screens/Authenticated/OurProducts";
+import OurProducts from "./src/Screens/Components/OurProducts";
 import Profile from "./src/Screens/User/Profile";
+import More from "./src/Screens/Components/More";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -35,6 +36,11 @@ export default function App() {
         <Stack.Screen
           name="Profile"
           component={Profile}
+          // options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="More"
+          component={More}
           // options={{ headerShown: false }}
         />
       </Stack.Navigator>

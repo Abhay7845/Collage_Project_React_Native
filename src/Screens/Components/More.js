@@ -2,23 +2,23 @@ import { StyleSheet, Text, View, ScrollView } from "react-native";
 import React from "react";
 import TabNavigator from "../../Common/TabNavigator";
 
-const Profile = () => {
+const More = () => {
   return (
     <View>
       <ScrollView>
-        <Text>Profile</Text>
-        <Text>Profile</Text>
-        <Text>Profile</Text>
-        <Text>Profile</Text>
-        <Text>Profile</Text>
-        <Text>Profile</Text>
-        <Text>Profile</Text>
+        <Text>More</Text>
+        <Text>More</Text>
+        <Text>More</Text>
+        <Text>More</Text>
+        <Text>More</Text>
+        <Text>More</Text>
+        <Text>More</Text>
       </ScrollView>
       <TabNavigator />
     </View>
   );
 };
 
-export default Profile;
+export default More;
 
 const styles = StyleSheet.create({});
