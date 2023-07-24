@@ -23,7 +23,7 @@ const TabNavigator = () => {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.TabIcon}
-        onPress={() => navigation.navigate("Product Details")}
+        onPress={() => navigation.navigate("Profile")}
       >
         <Icon name="user-circle-o" size={28} color="#ddd9d9" />
         <Text style={styles.TabIcon}>Profile</Text>

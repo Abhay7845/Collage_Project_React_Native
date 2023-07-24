@@ -5,6 +5,7 @@ import Home from "./src/Screens/Home";
 import Login from "./src/Screens/User/Login";
 import Register from "./src/Screens/User/Register";
 import OurProducts from "./src/Screens/Authenticated/OurProducts";
+import Profile from "./src/Screens/User/Profile";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -29,7 +30,12 @@ export default function App() {
         <Stack.Screen
           name="Product Details"
           component={OurProducts}
-          options={{ headerShown: false }}
+          // options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={Profile}
+          // options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
