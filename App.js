@@ -29,7 +29,7 @@ export default function App() {
         <Stack.Screen
           name="Product Details"
           component={OurProducts}
-          // options={{ headerShown: false }}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

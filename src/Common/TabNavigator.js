@@ -6,16 +6,26 @@ const TabNavigator = () => {
   return (
     <View style={styles.TabNavigator}>
       <View style={styles.TabIcon}>
-        <Icon name="home" size={28} color="#ddd9d9" />
+        <Icon
+          name="home"
+          size={28}
+          color="#ddd9d9"
+          // onPress={() => navigation.navigation.navigate("Home")}
+        />
         <Text style={{ color: "#ddd9d9" }}>Home</Text>
       </View>
       <View style={styles.TabIcon}>
-        <Icon name="shopping-cart" size={28} color="#ddd9d9" />
+        <Icon
+          name="shopping-cart"
+          size={28}
+          color="#ddd9d9"
+          // onPress={() => navigation.navigate("Product Details")}
+        />
         <Text style={styles.TabIcon}>Product</Text>
       </View>
       <View style={styles.TabIcon}>
-        <Icon name="user" size={28} color="#ddd9d9" />
-        <Text style={styles.TabIcon}>Product</Text>
+        <Icon name="user-circle-o" size={28} color="#ddd9d9" />
+        <Text style={styles.TabIcon}>Profile</Text>
       </View>
       <View style={styles.TabIcon}>
         <Icon name="list-ul" size={28} color="#ddd9d9" />
