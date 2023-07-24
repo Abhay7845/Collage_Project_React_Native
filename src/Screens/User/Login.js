@@ -24,7 +24,7 @@ const Login = ({ navigation }) => {
     setPasswordShown(!passwordShown);
   };
   const GetLogin = () => {
-    navigation.navigate("Product Details");
+    navigation.navigate("Home");
   };
 
   return (

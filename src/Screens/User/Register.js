@@ -39,7 +39,7 @@ const Register = ({ navigation }) => {
   const VerifyOTP = () => {
     const enteredOTP = `${pin1}${pin2}${pin3}${pin4}${pin5}${pin6}`;
     if (otp === parseInt(enteredOTP)) {
-      navigation.navigate("Product Details");
+      navigation.navigate("Home");
     } else {
       Alert.alert("Invalid OTP");
     }

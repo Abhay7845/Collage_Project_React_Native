@@ -65,20 +65,6 @@ const Home = ({ navigation }) => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={styles.LogRegBtn}>
-          <TouchableOpacity
-            style={styles.regBtn}
-            onPress={() => navigation.navigate("Register")}
-          >
-            <Text style={styles.btnText}>REGISTER</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.logBtn}
-            onPress={() => navigation.navigate("Login")}
-          >
-            <Text style={styles.btnText}>LOGIN</Text>
-          </TouchableOpacity>
-        </View>
         <View style={{ marginTop: 10 }}>
           <View style={styles.firstImaheInfo}>
             <Image style={styles.ImgStyle} source={img2} resizeMode="contain" />
@@ -133,7 +119,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#a5d5f5",
     height: undefined,
     display: "flex",
-    paddingTop: "35%",
+    paddingTop: "20%",
     alignItems: "center",
     paddingBottom: 50,
   },
@@ -224,19 +210,5 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     paddingTop: "5%",
     paddingBottom: "5%",
-  },
-  regBtn: {
-    backgroundColor: "green",
-    padding: 15,
-    borderRadius: 2,
-    width: "47%",
-    alignItems: "center",
-  },
-  logBtn: {
-    backgroundColor: "blue",
-    padding: 15,
-    borderRadius: 2,
-    width: "47%",
-    alignItems: "center",
   },
 });
