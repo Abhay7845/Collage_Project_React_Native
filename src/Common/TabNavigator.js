@@ -1,36 +1,40 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
+import { useNavigation } from "@react-navigation/native";
 
 const TabNavigator = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.TabNavigator}>
-      <View style={styles.TabIcon}>
-        <Icon
-          name="home"
-          size={28}
-          color="#ddd9d9"
-          // onPress={() => navigation.navigation.navigate("Home")}
-        />
+      <TouchableOpacity
+        style={styles.TabIcon}
+        onPress={() => navigation.navigate("Home")}
+      >
+        <Icon name="home" size={28} color="#ddd9d9" />
         <Text style={{ color: "#ddd9d9" }}>Home</Text>
-      </View>
-      <View style={styles.TabIcon}>
-        <Icon
-          name="shopping-cart"
-          size={28}
-          color="#ddd9d9"
-          // onPress={() => navigation.navigate("Product Details")}
-        />
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.TabIcon}
+        onPress={() => navigation.navigate("Product Details")}
+      >
+        <Icon name="shopping-cart" size={28} color="#ddd9d9" />
         <Text style={styles.TabIcon}>Product</Text>
-      </View>
-      <View style={styles.TabIcon}>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.TabIcon}
+        onPress={() => navigation.navigate("Product Details")}
+      >
         <Icon name="user-circle-o" size={28} color="#ddd9d9" />
         <Text style={styles.TabIcon}>Profile</Text>
-      </View>
-      <View style={styles.TabIcon}>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.TabIcon}
+        onPress={() => navigation.navigate("Product Details")}
+      >
         <Icon name="list-ul" size={28} color="#ddd9d9" />
         <Text style={styles.TabIcon}>More</Text>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };
