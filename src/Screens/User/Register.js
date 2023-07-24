@@ -13,7 +13,7 @@ import Phone from "react-native-vector-icons/FontAwesome";
 
 const Register = ({ navigation }) => {
   const [phoneNumber, SetPhoneNumber] = useState("");
-  const [otp, setOtp] = useState();
+  const [otp, setOtp] = useState("");
   const et1 = useRef();
   const et2 = useRef();
   const et3 = useRef();

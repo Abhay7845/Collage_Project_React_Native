@@ -17,9 +17,6 @@ const Login = ({ navigation }) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
 
-  console.log("phoneNumber=>", typeof phoneNumber);
-  console.log("password=>", password);
-
   const TogglePassword = () => {
     setPasswordShown(!passwordShown);
   };
