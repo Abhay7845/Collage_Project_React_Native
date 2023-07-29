@@ -5,7 +5,7 @@ import TabNavigator from "../../Common/TabNavigator";
 const OurProducts = () => {
   return (
     <View>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Text>OurProducts</Text>
         <Text>OurProducts</Text>
         <Text>OurProducts</Text>

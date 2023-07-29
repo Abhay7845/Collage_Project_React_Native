@@ -14,7 +14,7 @@ const Profile = () => {
   };
   return (
     <View>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Image
           style={styles.backImage}
           source={backProfile}
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
   name: {
-    marginTop: 7,
+    marginTop: 8,
     fontSize: 23,
     fontWeight: "bold",
   },

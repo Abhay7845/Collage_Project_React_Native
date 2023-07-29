@@ -22,7 +22,7 @@ const Home = ({ navigation }) => {
 
   return (
     <View>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.seacrchArea}>
           <Text style={styles.heading}>
             Find The Perfect Freelance Service For Your Business
