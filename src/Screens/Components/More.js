@@ -12,10 +12,10 @@ import { Input } from "@rneui/themed";
 import Icon from "react-native-vector-icons/FontAwesome";
 import AboutImg from "../../../assets/laptop.png";
 import moment from "moment";
+import { userComments } from "../../DataList";
+import { FlatList } from "react-native";
 
 const More = () => {
-  const date = new Date();
-
   return (
     <View>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -52,16 +52,31 @@ const More = () => {
             <Text style={{ fontSize: 20, color: "#ffff" }}>COMMENT</Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.yourComment}>
-          <Text style={styles.comntText}>Comments By Peoples : 5</Text>
-          <View style={styles.cmtPeople}>
-            <View style={{ flexDirection: "row" }}>
-              <Icon name="user-circle-o" size={24} color="gray" />
-              <Text style={styles.userMail}>Abhay123@gmail.com</Text>
-            </View>
-            <Text>{moment(date).format("LL")}</Text>
+        <View style={{ marginBottom: "25%", margin: 10 }}>
+          <View>
+            <Text style={styles.comntText}>
+              Comments By Peoples : {userComments.length}
+            </Text>
           </View>
-          <Text style={styles.userCmnt}>Nice applicatio for students</Text>
+          <FlatList
+            data={userComments}
+            renderItem={({ item }) => {
+              return (
+                <View style={styles.yourComment}>
+                  <View style={styles.cmtPeople}>
+                    <View style={{ flexDirection: "row" }}>
+                      <Icon name="user-circle-o" size={24} color="gray" />
+                      <Text style={styles.userMail}>{item.email}</Text>
+                    </View>
+                    <Text>{moment(item.date).format("ll")}</Text>
+                  </View>
+                  <Text style={styles.userCmnt}>{item.comment}.</Text>
+                  <View style={styles.CmntLine} />
+                </View>
+              );
+            }}
+            keyExtractor={(item) => item.id}
+          />
         </View>
       </ScrollView>
       <TabNavigator />
@@ -106,7 +121,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 25,
     marginTop: -60,
-    marginBottom: 25,
   },
   infoText: {
     fontSize: 20,
@@ -120,8 +134,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   yourComment: {
-    marginBottom: 100,
-    margin: 10,
+    margin: 4,
   },
   comntText: {
     color: "gray",
@@ -144,5 +157,10 @@ const styles = StyleSheet.create({
     textAlign: "justify",
     fontSize: 17,
     marginTop: 5,
+  },
+  CmntLine: {
+    borderBottomWidth: 1,
+    borderBottomColor: "gray",
+    paddingBottom: 5,
   },
 });

@@ -38,3 +38,37 @@ export const ImageList = [
     img_url: img_url6,
   },
 ];
+
+export const userComments = [
+  {
+    id: 1,
+    email: "akash234@gmail.com",
+    date: "2023-07-29T07:10:39.966Z",
+    comment: "Good helpling to us",
+  },
+  {
+    id: 2,
+    email: "arun3421@gmail.com",
+    date: "2023-07-29T07:10:39.966Z",
+    comment: "This is awesome helping to learing",
+  },
+  {
+    id: 3,
+    email: "vinod@gmail.com",
+    date: "2023-07-29T07:10:39.966Z",
+    comment:
+      "This is too much bettter than other mobile aplication according to learnig help",
+  },
+  {
+    id: 4,
+    email: "arun3421@gmail.com",
+    date: "2023-07-29T07:10:39.966Z",
+    comment: "This is awesome helping to learing",
+  },
+  {
+    id: 5,
+    email: "akash234@gmail.com",
+    date: "2023-07-29T07:10:39.966Z",
+    comment: "Good helpling to us",
+  },
+];
