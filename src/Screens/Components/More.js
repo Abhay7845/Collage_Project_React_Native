@@ -6,6 +6,7 @@ import {
   ScrollView,
   TouchableOpacity,
   Image,
+  FlatList,
 } from "react-native";
 import TabNavigator from "../../Common/TabNavigator";
 import { Input } from "@rneui/themed";
@@ -13,7 +14,6 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import AboutImg from "../../../assets/laptop.png";
 import moment from "moment";
 import { userComments } from "../../DataList";
-import { FlatList } from "react-native";
 
 const More = () => {
   return (
