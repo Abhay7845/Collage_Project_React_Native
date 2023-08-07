@@ -52,30 +52,32 @@ const More = () => {
             <Text style={{ fontSize: 20, color: "#ffff" }}>COMMENT</Text>
           </TouchableOpacity>
         </View>
-        <View style={{ marginBottom: "25%", margin: 10 }}>
-          <Text style={styles.comntText}>
-            Comments By Peoples : {userComments.length}
-          </Text>
-          <FlatList
-            data={userComments}
-            renderItem={({ item }) => {
-              return (
-                <View style={styles.yourComment}>
-                  <View style={styles.cmtPeople}>
-                    <View style={{ flexDirection: "row" }}>
-                      <Icon name="user-circle-o" size={24} color="gray" />
-                      <Text style={styles.userMail}>{item.email}</Text>
+        {userComments.length > 0 && (
+          <View style={{ marginBottom: "25%", margin: 10 }}>
+            <Text style={styles.comntText}>
+              Comments By Peoples : {userComments.length}
+            </Text>
+            <FlatList
+              data={userComments}
+              renderItem={({ item }) => {
+                return (
+                  <View style={styles.yourComment}>
+                    <View style={styles.cmtPeople}>
+                      <View style={{ flexDirection: "row" }}>
+                        <Icon name="user-circle-o" size={24} color="gray" />
+                        <Text style={styles.userMail}>{item.email}</Text>
+                      </View>
+                      <Text>{moment(item.date).format("ll")}</Text>
                     </View>
-                    <Text>{moment(item.date).format("ll")}</Text>
+                    <Text style={styles.userCmnt}>{item.comment}.</Text>
+                    <View style={styles.CmntLine} />
                   </View>
-                  <Text style={styles.userCmnt}>{item.comment}.</Text>
-                  <View style={styles.CmntLine} />
-                </View>
-              );
-            }}
-            keyExtractor={(item) => item.id}
-          />
-        </View>
+                );
+              }}
+              keyExtractor={(item) => item.id}
+            />
+          </View>
+        )}
       </ScrollView>
       <TabNavigator />
     </View>
