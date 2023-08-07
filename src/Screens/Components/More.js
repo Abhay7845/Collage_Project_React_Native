@@ -53,11 +53,9 @@ const More = () => {
           </TouchableOpacity>
         </View>
         <View style={{ marginBottom: "25%", margin: 10 }}>
-          <View>
-            <Text style={styles.comntText}>
-              Comments By Peoples : {userComments.length}
-            </Text>
-          </View>
+          <Text style={styles.comntText}>
+            Comments By Peoples : {userComments.length}
+          </Text>
           <FlatList
             data={userComments}
             renderItem={({ item }) => {
