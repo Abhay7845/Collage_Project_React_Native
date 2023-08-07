@@ -1,40 +1,54 @@
 import React from "react";
-import { ScrollView, StyleSheet, Text, View, Image } from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  FlatList,
+} from "react-native";
 import TabNavigator from "../../Common/TabNavigator";
-import AboutImg from "../../../assets/laptop.png";
+import { ProductsList } from "../../DataList";
 
 const OurProducts = () => {
-  const imageUrl =
-    "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg";
   return (
     <View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Text style={styles.productHeading}>Our Products</Text>
-        <View style={styles.productsView}>
-          <Image
-            source={AboutImg}
-            alt="url.png"
-            style={styles.proImg}
-            resizeMode="center"
+        <View style={{ marginBottom: 100, marginTop: 10 }}>
+          <FlatList
+            keyExtractor={(item) => item.id}
+            data={ProductsList}
+            renderItem={({ item }) => {
+              return (
+                <View style={styles.productsView}>
+                  <View style={{ margin: 5 }}>
+                    <Image
+                      source={{ uri: item.imgUrl }}
+                      alt="url.png"
+                      style={styles.proImg}
+                      resizeMode="center"
+                    />
+                  </View>
+                  <View style={styles.productDetails}>
+                    <Text style={styles.proHeading}>{item.name}</Text>
+                    <Text style={styles.description}>{item.description}</Text>
+                    <View style={styles.price}>
+                      <Text style={styles.text}>₹ {item.price}</Text>
+                      <Text style={styles.text}>{item.rom}</Text>
+                      <Text style={styles.text}>{item.ram}</Text>
+                    </View>
+                    <View style={styles.price}>
+                      <Text style={styles.text}>{item.diliveryDate}</Text>
+                      <Text style={styles.text}>{item.warrenty}</Text>
+                    </View>
+                  </View>
+                </View>
+              );
+            }}
           />
-          <View style={styles.productDetails}>
-            <Text style={styles.proHeading}>LAPTOP</Text>
-            <Text style={styles.description}>
-              HP 15s (2023) Athlon Dual Core 3050U - (8 GB/512 GB SSD/Windows 11
-              Home) 15s-ey1509AU Thin and Light L...
-            </Text>
-            <View style={styles.price}>
-              <Text style={styles.text}>₹ 35,999</Text>
-              <Text style={styles.text}>512 GB SSD</Text>
-              <Text style={styles.text}>8GB DDR4 RAM</Text>
-            </View>
-            <View style={styles.price}>
-              <Text style={styles.text}>Dilivery(Feb-10, 2023) </Text>
-              <Text style={styles.text}>1 Years Warranty</Text>
-            </View>
-          </View>
         </View>
       </ScrollView>
+      <TabNavigator />
     </View>
   );
 };
@@ -42,12 +56,6 @@ const OurProducts = () => {
 export default OurProducts;
 
 const styles = StyleSheet.create({
-  productHeading: {
-    textAlign: "center",
-    fontSize: 25,
-    color: "#0cacb8",
-    marginBottom: 20,
-  },
   productsView: {
     flexDirection: "row",
     borderBottomWidth: 1,
@@ -55,10 +63,11 @@ const styles = StyleSheet.create({
   },
   proImg: {
     width: 120,
-    height: 120,
+    height: 130,
+    borderRadius: 3,
   },
   productDetails: {
-    width: "71%",
+    width: "68%",
   },
   proHeading: {
     fontSize: 18,

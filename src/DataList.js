@@ -72,3 +72,135 @@ export const userComments = [
     comment: "Good helpling to us",
   },
 ];
+
+export const ProductsList = [
+  {
+    id: 1,
+    imgUrl:
+      "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/b/d/i/-original-imagzhefhc84rmbf.jpeg?q=70",
+    name: "Laptop",
+    description:
+      "HP Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15s- fr4000TU Thin and Light Laptop",
+    price: "35,999",
+    ram: "8GM DDR4",
+    rom: "512 GB SSD",
+    warrenty: "1 Year",
+    diliveryDate: "Feb,10, 2023",
+  },
+  {
+    id: 2,
+    imgUrl:
+      "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/f/a/8/-original-imagp7pf86vm9mmj.jpeg?q=70",
+    name: "Laptop",
+    description:
+      "HP Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15s- fr4000TU Thin and Light Laptop",
+    price: "35,999",
+    ram: "8GM DDR4",
+    rom: "512 GB SSD",
+    warrenty: "1 Year",
+    diliveryDate: "Feb,10, 2023",
+  },
+  {
+    id: 3,
+    imgUrl:
+      "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/n/i/u/-original-imagpa5fbvqzk2xn.jpeg?q=70",
+    name: "Laptop",
+    description:
+      "HP Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15s- fr4000TU Thin and Light Laptop",
+    price: "35,999",
+    ram: "8GM DDR4",
+    rom: "512 GB SSD",
+    warrenty: "1 Year",
+    diliveryDate: "Feb,10, 2023",
+  },
+  {
+    id: 4,
+    imgUrl:
+      "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/5/6/i/-original-imaggshd5zgfe8ev.jpeg?q=70",
+    name: "Laptop",
+    description:
+      "HP Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15s- fr4000TU Thin and Light Laptop",
+    price: "35,999",
+    ram: "8GM DDR4",
+    rom: "512 GB SSD",
+    warrenty: "1 Year",
+    diliveryDate: "Feb,10, 2023",
+  },
+  {
+    id: 5,
+    imgUrl:
+      "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/d/h/q/-original-imagrmhu8wvhykb7.jpeg?q=70",
+    name: "Laptop",
+    description:
+      "HP Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15s- fr4000TU Thin and Light Laptop",
+    price: "35,999",
+    ram: "8GM DDR4",
+    rom: "512 GB SSD",
+    warrenty: "1 Year",
+    diliveryDate: "Feb,10, 2023",
+  },
+  {
+    id: 6,
+    imgUrl:
+      "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/2/n/modern-14-c11m-031in-thin-and-light-laptop-msi-original-imagnjymxrnuxtwt.jpeg?q=70",
+    name: "Laptop",
+    description:
+      "HP Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15s- fr4000TU Thin and Light Laptop",
+    price: "35,999",
+    ram: "8GM DDR4",
+    rom: "512 GB SSD",
+    warrenty: "1 Year",
+    diliveryDate: "Feb,10, 2023",
+  },
+  {
+    id: 7,
+    imgUrl:
+      "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/j/r/j/-original-imagp7pfqggfaqqm.jpeg?q=70",
+    name: "Laptop",
+    description:
+      "HP Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15s- fr4000TU Thin and Light Laptop",
+    price: "35,999",
+    ram: "8GM DDR4",
+    rom: "512 GB SSD",
+    warrenty: "1 Year",
+    diliveryDate: "Feb,10, 2023",
+  },
+  {
+    id: 8,
+    imgUrl:
+      "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/u/m/k/-original-imagzyfzhzcw8wvp.jpeg?q=70",
+    name: "Laptop",
+    description: "HP Intel Core i5 11th Gen",
+    price: "35,999",
+    ram: "8GM DDR4",
+    rom: "512 GB SSD",
+    warrenty: "1 Year",
+    diliveryDate: "Feb,10, 2023",
+  },
+  {
+    id: 9,
+    imgUrl:
+      "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/e/f/-original-imagrgprbhchwgve.jpeg?q=70",
+    name: "Laptop",
+    description:
+      "HP Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15s- fr4000TU Thin and Light Laptop",
+    price: "35,999",
+    ram: "8GM DDR4",
+    rom: "512 GB SSD",
+    warrenty: "1 Year",
+    diliveryDate: "Feb,10, 2023",
+  },
+  {
+    id: 10,
+    imgUrl:
+      "https://rukminim2.flixcart.com/image/312/312/ksez24w0/computer/h/8/9/rmnb1001-thin-and-light-laptop-realme-original-imag5zhgcstmjbxg.jpeg?q=70",
+    name: "Laptop",
+    description:
+      "HP Intel Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15s- fr4000TU Thin and Light Laptop",
+    price: "35,999",
+    ram: "8GM DDR4",
+    rom: "512 GB SSD",
+    warrenty: "1 Year",
+    diliveryDate: "Feb,10, 2023",
+  },
+];
