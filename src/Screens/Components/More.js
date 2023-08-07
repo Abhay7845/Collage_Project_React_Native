@@ -59,6 +59,8 @@ const More = () => {
             </Text>
             <FlatList
               data={userComments}
+              horizontal
+              showsHorizontalScrollIndicator={false}
               renderItem={({ item }) => {
                 return (
                   <View style={styles.yourComment}>
@@ -70,7 +72,6 @@ const More = () => {
                       <Text>{moment(item.date).format("ll")}</Text>
                     </View>
                     <Text style={styles.userCmnt}>{item.comment}.</Text>
-                    <View style={styles.CmntLine} />
                   </View>
                 );
               }}
@@ -135,6 +136,9 @@ const styles = StyleSheet.create({
   },
   yourComment: {
     margin: 4,
+    borderWidth: 1,
+    borderColor: "#a39f9f",
+    padding: 3,
   },
   comntText: {
     color: "gray",
@@ -157,10 +161,5 @@ const styles = StyleSheet.create({
     textAlign: "justify",
     fontSize: 17,
     marginTop: 5,
-  },
-  CmntLine: {
-    borderBottomWidth: 1,
-    borderBottomColor: "gray",
-    paddingBottom: 5,
   },
 });
