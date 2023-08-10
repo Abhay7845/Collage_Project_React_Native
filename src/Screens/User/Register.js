@@ -10,6 +10,8 @@ import {
 } from "react-native";
 import { Input } from "@rneui/themed";
 import Phone from "react-native-vector-icons/FontAwesome";
+import axios from "axios";
+import { Phoneulr1, Phoneulr2 } from "../../API/Host_URL";
 
 const Register = ({ navigation }) => {
   const [phoneNumber, SetPhoneNumber] = useState("");
@@ -31,9 +33,18 @@ const Register = ({ navigation }) => {
   const GetOtp = () => {
     const min = 100000;
     const max = 999999;
-    const Otp = Math.floor(Math.random() * (max - min + 1)) + min;
-    setOtp(Otp);
-    setCount(60);
+    const OtpPhone = Math.floor(Math.random() * (max - min + 1)) + min;
+    axios
+      .get(
+        `${Phoneulr1}${phoneNumber}&message=Kindly+share+this+OTP+-+${OtpPhone}${Phoneulr2}`
+      )
+      .then((res) => res)
+      .then((response) => {
+        if (response) {
+          setOtp(OtpPhone);
+          setCount(60);
+        }
+      });
   };
 
   const VerifyOTP = () => {
@@ -267,12 +278,6 @@ const Register = ({ navigation }) => {
           If you have account Login
         </Text>
       </TouchableOpacity>
-      {otp && (
-        <View style={styles.sendedOTP}>
-          <Text style={styles.sededOtpTxt}>Your OTP - </Text>
-          <Text style={styles.sededOtpTxt}>{otp}</Text>
-        </View>
-      )}
     </ScrollView>
   );
 };
