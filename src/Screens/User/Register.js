@@ -11,7 +11,7 @@ import {
 import { Input } from "@rneui/themed";
 import Phone from "react-native-vector-icons/FontAwesome";
 import axios from "axios";
-import { Phoneulr1, Phoneulr2 } from "../../API/Host_URL";
+import { HOST_URL } from "../../API/Host_URL";
 
 const Register = ({ navigation }) => {
   const [phoneNumber, SetPhoneNumber] = useState("");
@@ -31,24 +31,19 @@ const Register = ({ navigation }) => {
   const [count, setCount] = useState(60);
 
   const GetOtp = () => {
-    const min = 100000;
-    const max = 999999;
-    const OtpPhone = Math.floor(Math.random() * (max - min + 1)) + min;
     axios
-      .get(
-        `${Phoneulr1}${phoneNumber}&message=Kindly+share+this+OTP+-+${OtpPhone}${Phoneulr2}`
-      )
+      .get(`${HOST_URL}/get/mobile/otp/${phoneNumber}`)
       .then((res) => res)
       .then((response) => {
-        if (response) {
-          setOtp(OtpPhone);
+        if (response.data.code === "1000") {
+          setOtp(response.data.otp);
           setCount(60);
         }
       });
   };
 
+  const enteredOTP = `${pin1}${pin2}${pin3}${pin4}${pin5}${pin6}`;
   const VerifyOTP = () => {
-    const enteredOTP = `${pin1}${pin2}${pin3}${pin4}${pin5}${pin6}`;
     if (otp === parseInt(enteredOTP)) {
       navigation.navigate("Home");
     } else {
@@ -68,6 +63,8 @@ const Register = ({ navigation }) => {
       clearInterval(intervel);
     };
   }, [count]);
+
+
 
   return (
     <ScrollView>
@@ -219,11 +216,11 @@ const Register = ({ navigation }) => {
           <TouchableOpacity
             disabled={
               pin1 !== "" &&
-              pin2 !== "" &&
-              pin3 !== "" &&
-              pin4 !== "" &&
-              pin5 !== "" &&
-              pin6 !== ""
+                pin2 !== "" &&
+                pin3 !== "" &&
+                pin4 !== "" &&
+                pin5 !== "" &&
+                pin6 !== ""
                 ? false
                 : true
             }
@@ -232,11 +229,11 @@ const Register = ({ navigation }) => {
               {
                 backgroundColor:
                   pin1 !== "" &&
-                  pin2 !== "" &&
-                  pin3 !== "" &&
-                  pin4 !== "" &&
-                  pin5 !== "" &&
-                  pin6 !== ""
+                    pin2 !== "" &&
+                    pin3 !== "" &&
+                    pin4 !== "" &&
+                    pin5 !== "" &&
+                    pin6 !== ""
                     ? "#1899e4"
                     : "#8080806f",
               },
