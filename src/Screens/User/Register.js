@@ -42,8 +42,8 @@ const Register = ({ navigation }) => {
       });
   };
 
-  const enteredOTP = `${pin1}${pin2}${pin3}${pin4}${pin5}${pin6}`;
   const VerifyOTP = () => {
+    const enteredOTP = `${pin1}${pin2}${pin3}${pin4}${pin5}${pin6}`;
     if (otp === parseInt(enteredOTP)) {
       navigation.navigate("Home");
     } else {
